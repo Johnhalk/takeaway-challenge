@@ -1,0 +1,5 @@
+User story 1: requiring items from a menu list.
+
+require './lib/menu'
+menu=Menu.new
+menu.list_items
