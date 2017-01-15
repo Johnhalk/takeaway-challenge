@@ -12,3 +12,20 @@ takeaway.list_items
 takeaway.show_order
 takeaway.add_order('curry', 2)
 takeaway.show_order
+
+
+require './lib/takeaway'
+takeaway=Takeaway.new
+takeaway.add_dish("curry", 7.95)
+takeaway.add_dish("pizza", 12.95)
+takeaway.add_dish("pasta", 8.95)
+takeaway.add_dish("burger", 9.95)
+takeaway.show_menu
+takeaway.add_to("curry")
+takeaway.add_to("curry")
+takeaway.add_to("pizza")
+takeaway.add_to("burger")
+takeaway.show_menu
+takeaway.total_order
+takeaway.see_current_order
+takeaway.order_checkout

@@ -1,10 +1,21 @@
 class Menu
 
-attr_reader :order_items
-attr_accessor :list_items
+attr_reader :menu_list
 
   def initialize
-    @order_items = [{"curry" => 12.95}, {"burger" => 7.95}, {"pizza" => 13.95}]
+    @menu_list = []
   end
-  
+
+
+def add(food, amount)
+  dish = Hash.new
+  dish[:food] = food
+  dish[:amount] = amount
+  @menu_list << dish
+end
+
+def current_menu
+  @menu_list
+end
+
 end

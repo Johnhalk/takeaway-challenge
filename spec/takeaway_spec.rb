@@ -3,14 +3,14 @@ require 'menu'
 
 describe Takeaway do
   subject(:takeaway) {described_class.new}
-  let(:fake_dish) {double:dish}
+  let(:fake_dish) {double:order_items}
 
   describe '#add_order' do
     it {is_expected.to respond_to(:add_order)}
 
     context 'if adding items' do
       it 'should add the dish and amount to the order array' do
-        expect{takeaway.add_order(pizza, 2).to change(takeaway :order)}
+        expect{takeaway.add_order("pizza", 2).to change(takeaway :order)}
       end
 
       it 'should return an error if the item is not on the menu' do
