@@ -3,3 +3,12 @@ User story 1: requiring items from a menu list.
 require './lib/menu'
 menu=Menu.new
 menu.list_items
+
+User story 2:
+
+require './lib/takeaway'
+takeaway=Takeaway.new
+takeaway.list_items
+takeaway.show_order
+takeaway.add_order('curry', 2)
+takeaway.show_order
